@@ -112,5 +112,10 @@ namespace SalesWinApp
 
             LoadProduct(null);
         }
+
+        private void txtUnitPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsNumber(e.KeyChar);
+        }
     }
 }

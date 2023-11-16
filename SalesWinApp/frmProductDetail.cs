@@ -36,8 +36,6 @@ namespace SalesWinApp
                 ProductName = txtProductName.Text,
                 UnitPrice = Decimal.Parse(txtUnitPrice.Text),
                 UnitsInStock = Int32.Parse(txtUnitsInStock.Text),
-
-
             };
 
 
@@ -87,6 +85,16 @@ namespace SalesWinApp
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtUnitPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsNumber(e.KeyChar);
+        }
+
+        private void txtUnitsInStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsNumber(e.KeyChar);
         }
     }
 }

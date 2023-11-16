@@ -73,6 +73,7 @@
             txtUnitsInStock.Name = "txtUnitsInStock";
             txtUnitsInStock.Size = new Size(184, 23);
             txtUnitsInStock.TabIndex = 59;
+            txtUnitsInStock.KeyPress += txtUnitsInStock_KeyPress;
             // 
             // label6
             // 
@@ -90,6 +91,7 @@
             txtUnitPrice.Name = "txtUnitPrice";
             txtUnitPrice.Size = new Size(184, 23);
             txtUnitPrice.TabIndex = 57;
+            txtUnitPrice.KeyPress += txtUnitPrice_KeyPress;
             // 
             // label5
             // 

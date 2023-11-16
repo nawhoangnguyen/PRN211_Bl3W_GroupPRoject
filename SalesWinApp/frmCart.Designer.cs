@@ -78,6 +78,7 @@
             txtUnitPrice.Name = "txtUnitPrice";
             txtUnitPrice.Size = new Size(184, 23);
             txtUnitPrice.TabIndex = 75;
+            txtUnitPrice.KeyPress += txtUnitPrice_KeyPress;
             // 
             // label5
             // 
