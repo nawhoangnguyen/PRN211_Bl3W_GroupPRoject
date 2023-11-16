@@ -121,6 +121,7 @@ namespace DataAccess
                     productToUpdate.UnitsInStock = productDto.UnitsInStock;
                     productToUpdate.DiscountId = productDto.DiscountId;
                     // Cập nhật các thuộc tính khác nếu cần
+
                     context.SaveChanges();
                 }
                 else
@@ -236,7 +237,7 @@ namespace DataAccess
 
         }
 
-       
+
 
     }
 }

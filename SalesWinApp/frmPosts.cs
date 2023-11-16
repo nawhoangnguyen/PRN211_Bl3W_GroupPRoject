@@ -118,8 +118,7 @@ namespace SalesWinApp
 
             frmPostDetail frmPostDetail = new frmPostDetail()
             {
-                InsertOrUpdate = true,
-                PostId = getPostIdBySelectedRow(),
+                InsertOrUpdate = true,            
 
             };
 

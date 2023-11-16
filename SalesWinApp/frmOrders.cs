@@ -78,6 +78,10 @@ namespace SalesWinApp
                 btnView.Enabled = true;
             }
 
+
+
+
+
             txtOrderId.Enabled = false;
             txtMemberId.Enabled = false;
             txtOrderDate.Enabled = false;
@@ -130,6 +134,12 @@ namespace SalesWinApp
 
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
+
+                dataGridView1.Columns["RequiredDate"].Visible = false;
+                dataGridView1.Columns["ShippedDate"].Visible = false;
+                dataGridView1.Columns["Freight"].Visible = false;
+                dataGridView1.Columns["Member"].Visible = false;
+                dataGridView1.Columns["OrderDetails"].Visible = false;
 
 
             }
