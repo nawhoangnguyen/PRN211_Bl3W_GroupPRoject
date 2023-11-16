@@ -132,13 +132,13 @@ namespace SalesWinApp
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you sure you want to delete this member ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 int id = Int32.Parse(txtMemberId.Text);
                 memberRepository.Delete(id);
                 LoadMember();
             }
-          
+
         }
 
         private void frmMembers_Load_1(object sender, EventArgs e)
@@ -148,6 +148,16 @@ namespace SalesWinApp
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

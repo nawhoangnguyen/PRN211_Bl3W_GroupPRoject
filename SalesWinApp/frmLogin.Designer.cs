@@ -51,7 +51,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Historic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(256, 499);
+            label1.Location = new Point(248, 555);
             label1.Name = "label1";
             label1.Size = new Size(111, 41);
             label1.TabIndex = 0;
@@ -127,7 +127,7 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(170, 88);
+            panel1.Location = new Point(162, 144);
             panel1.Name = "panel1";
             panel1.Size = new Size(971, 504);
             panel1.TabIndex = 7;
