@@ -2,15 +2,7 @@
 using DataAccess;
 using DataAccess.Repository;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -30,7 +22,7 @@ namespace SalesWinApp
             InitializeComponent();
         }
 
-        public void LoadProduct(List<ProductDTO> list)
+        public void LoadProduct(List<CartItemDTO> list)
         {
             try
             {
@@ -48,15 +40,8 @@ namespace SalesWinApp
                     ProductDTO product = productRepository.GetOneById(cartItem.ProductId);
                     products.Add(product);
                 }
-                if (list.IsNullOrEmpty())
-                {
-                    products = productRepository.GetAll();
 
-                }
-                else
-                {
-                    products = list;
-                }
+
 
                 source = new BindingSource();
                 source.DataSource = products;
@@ -80,6 +65,16 @@ namespace SalesWinApp
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
 
+                // Tạo một cột mới
+                DataGridViewTextBoxColumn quantityColumn = new DataGridViewTextBoxColumn();
+
+                // Cấu hình các thuộc tính của cột
+                quantityColumn.HeaderText = "Quantity";
+                quantityColumn.Name = "Quantity";
+
+                // Thêm cột vào DataGridView
+                dataGridView1.Columns.Add(quantityColumn);
+
                 dataGridView1.Columns["DiscountId"].Visible = false;
                 dataGridView1.Columns["CartItems"].Visible = false;
                 dataGridView1.Columns["Category"].Visible = false;
@@ -87,7 +82,27 @@ namespace SalesWinApp
                 dataGridView1.Columns["OrderDetails"].Visible = false;
                 dataGridView1.Columns["CategoryId"].Visible = false;
 
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    int productId = Convert.ToInt32(row.Cells["ProductId"].Value);
 
+                    List<CartItemDTO> cartItem = cartItems.Where(item => item.ProductId == productId).ToList();
+                    int count = 0;
+                    foreach (var cart in cartItem)
+                    {
+                        count++;
+                    }
+                    if (!cartItem.IsNullOrEmpty())
+                    {
+                        // Gán giá trị Quantity từ CartItemDTO cho cột "Quantity"
+                        row.Cells["Quantity"].Value = count;
+                    }
+                    else
+                    {
+                        // Nếu không tìm thấy CartItemDTO, có thể đặt giá trị mặc định hoặc để trống tùy thuộc vào yêu cầu
+                        row.Cells["Quantity"].Value = 0; // Hoặc giá trị mặc định khác
+                    }
+                }
 
 
 

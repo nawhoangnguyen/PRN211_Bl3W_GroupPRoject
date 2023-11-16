@@ -33,13 +33,14 @@
             tsProduct = new ToolStripMenuItem();
             tsOrder = new ToolStripMenuItem();
             postToolStripMenuItem = new ToolStripMenuItem();
+            discountToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tsMember, tsProduct, tsOrder, postToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tsMember, tsProduct, tsOrder, postToolStripMenuItem, discountToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(7, 3, 0, 3);
@@ -75,6 +76,13 @@
             postToolStripMenuItem.Text = "Post";
             postToolStripMenuItem.Click += postToolStripMenuItem_Click;
             // 
+            // discountToolStripMenuItem
+            // 
+            discountToolStripMenuItem.Name = "discountToolStripMenuItem";
+            discountToolStripMenuItem.Size = new Size(81, 24);
+            discountToolStripMenuItem.Text = "Discount";
+            discountToolStripMenuItem.Click += discountToolStripMenuItem_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -99,5 +107,6 @@
         private ToolStripMenuItem tsProduct;
         private ToolStripMenuItem tsOrder;
         private ToolStripMenuItem postToolStripMenuItem;
+        private ToolStripMenuItem discountToolStripMenuItem;
     }
 }

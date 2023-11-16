@@ -94,5 +94,10 @@ namespace SalesWinApp
             };
             frmPosts.ShowDialog();
         }
+
+        private void discountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

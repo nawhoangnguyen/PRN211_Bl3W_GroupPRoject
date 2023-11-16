@@ -2,15 +2,6 @@
 using DataAccess;
 using DataAccess.Repository;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -28,6 +19,8 @@ namespace SalesWinApp
         public frmProducts()
         {
             InitializeComponent();
+
+
         }
         private void ClearText()
         {
@@ -212,10 +205,10 @@ namespace SalesWinApp
         {
 
             bool check = true;
-           /* if (radId.Checked)
-            {
-                check = false;
-            }*/
+            /* if (radId.Checked)
+             {
+                 check = false;
+             }*/
             try
             {
                 LoadProduct(productRepository.SearchByNameAndIdOrSortByUnitPriceAndUnitsPriceInStock(txtSearch.Text, null, null, check));
@@ -317,7 +310,7 @@ namespace SalesWinApp
         {
             frmCart frmCart = new frmCart()
             {
-                memberId= memberId,
+                memberId = memberId,
                 shoppingSession = shoppingSession
             };
 
