@@ -170,6 +170,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(50, 332);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
@@ -352,6 +353,7 @@
             // 
             // dgvOrderDetail
             // 
+            dgvOrderDetail.AllowUserToAddRows = false;
             dgvOrderDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvOrderDetail.Location = new Point(5, 245);
             dgvOrderDetail.Margin = new Padding(3, 2, 3, 2);

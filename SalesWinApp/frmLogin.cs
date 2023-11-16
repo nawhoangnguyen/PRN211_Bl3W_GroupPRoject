@@ -44,7 +44,6 @@ namespace SalesWinApp
                     memberId = memberRepositor.Login(txtEmail.Text, txtPassword.Text).MemberId
                 };
                 frmMain.ShowDialog();
-                this.Close();
             }
             else
             {

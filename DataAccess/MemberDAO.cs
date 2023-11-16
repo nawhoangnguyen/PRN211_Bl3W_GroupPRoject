@@ -34,8 +34,14 @@ namespace DataAccess
         {
             try
             {
-               
-                    return mapper.Map(context.Members.ToList(), new List<MemberDTO>()) ;
+                List<MemberDTO> list = new List<MemberDTO>();
+                List<Member> members = context.Members.ToList();
+                foreach (var member in members)
+                {
+                    MemberDTO dto = mapper.Map(member, new MemberDTO());
+                    list.Add(dto);
+                }
+                    return list;
                 
             }
             catch (Exception ex) {
@@ -43,6 +49,8 @@ namespace DataAccess
                 return null;
             }
         }
+
+  
 
         public MemberDTO GetMemberById(int id)
         {
@@ -89,7 +97,7 @@ namespace DataAccess
                 context.Members.Attach(entity);
 
                     // Mark the member as modified, so Entity Framework knows to update it
-                    var entry = context.Entry(member);
+                    var entry = context.Entry(entity);
                     entry.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
 
                     // Save the changes to the database
@@ -140,6 +148,8 @@ namespace DataAccess
                 return null;
             }
         }
+
+        
 
     }
     

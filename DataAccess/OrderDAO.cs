@@ -38,8 +38,15 @@ namespace DataAccess
         {
             try
             {
+                List<OrderDTO> list = new List<OrderDTO>();
+                List<Order> orders = context.Orders.ToList();
+                foreach (var order in orders)
+                {
+                    OrderDTO dto = mapper.Map(order, new OrderDTO());
+                    list.Add(dto);
+                }
+                return list;
 
-                return mapper.Map(context.Orders.ToList(), new List<OrderDTO>());
 
 
             }
@@ -73,8 +80,9 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                return null;
                 Console.WriteLine(ex.Message);
+
+                return null;
             }
         }
 
@@ -149,27 +157,49 @@ namespace DataAccess
 
         public List<OrderDTO> SearchAndSort(DateTime from, DateTime to, Int32 memberId)
         {
+          
 
-            List<OrderDTO> order = new List<OrderDTO>();
             if (memberId > 0)
-                return mapper.Map(
-                    context.Orders.Where(m => m.OrderDate >= from
-                && m.OrderDate <= to && m.MemberId == memberId).OrderByDescending(m => m.OrderId).ToList()
-                    , order) ;
-            else
-                return mapper.Map(context.Orders.Where(m => m.OrderDate >= from && m.OrderDate <= to)
-                    .OrderByDescending(m => m.OrderId).ToList()
-                    , order);
-
+            {
+                List<OrderDTO> list = new List<OrderDTO>();
+                List<Order> orders = context.Orders.Where(m => m.OrderDate >= from
+                && m.OrderDate <= to && m.MemberId == memberId).OrderByDescending(m => m.OrderId).ToList();
+                foreach (var order in orders)
+                {
+                    OrderDTO dto = mapper.Map(order, new OrderDTO());
+                    list.Add(dto);
+                }
+                return list;
+            }
+                
+            else {
+                List<OrderDTO> list = new List<OrderDTO>();
+                List<Order> orders = context.Orders.Where(m => m.OrderDate >= from && m.OrderDate <= to)
+                    .OrderByDescending(m => m.OrderId).ToList();
+                foreach (var order in orders)
+                {
+                    OrderDTO dto = mapper.Map(order, new OrderDTO());
+                    list.Add(dto);
+                }
+                return list;
+            }
 
 
         }
 
         public List<OrderDTO> GetOrdersByUserId(int id)
         {
-            
-                return mapper.Map(context.Orders.Where(m => m.MemberId == id)
-                    .OrderByDescending(m => m.OrderId).ToList(), new List<OrderDTO>());
+            List<OrderDTO> list = new List<OrderDTO>();
+            List<Order> orders = context.Orders.Where(m => m.MemberId == id)
+                    .OrderByDescending(m => m.OrderId).ToList();
+            foreach (var order in orders)
+            {
+                OrderDTO dto = mapper.Map(order, new OrderDTO());
+                list.Add(dto);
+            }
+            return list;
+
+           
 
 
             

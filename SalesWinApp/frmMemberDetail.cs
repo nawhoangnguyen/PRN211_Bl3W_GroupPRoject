@@ -110,7 +110,7 @@ namespace SalesWinApp
 
         private void btnCancle_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)

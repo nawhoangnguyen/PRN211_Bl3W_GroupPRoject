@@ -15,7 +15,7 @@ namespace BusinessObject
 
             ToProperties.ToList().ForEach(o =>
             {
-                var fromp = FromProperties.FirstOrDefault(x => x.Name == o.Name && x.PropertyType == o.PropertyType);
+                var fromp = FromProperties.FirstOrDefault(x => string.Equals(x.Name, o.Name, StringComparison.OrdinalIgnoreCase) && x.PropertyType.Equals(o.PropertyType));
                 if (fromp != null)
                 {
                     o.SetValue(objto, fromp.GetValue(objfrom));

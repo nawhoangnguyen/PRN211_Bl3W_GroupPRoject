@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess;
 using DataAccess.Repository;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -73,9 +74,23 @@ namespace SalesWinApp
                 txtUnitPrice.DataBindings.Add("Text", source, "UnitPrice");
                 txtUnitsInStock.DataBindings.Add("Text", source, "UnitsInStock");
                 txtWeight.DataBindings.Add("Text", source, "Weight");
+                cboCategory.DataSource = CategoryDAO.Instance.GetCategories();
+                cboCategory.DisplayMember = "CategoryName";
+                cboCategory.ValueMember = "CategoryId";
 
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
+
+                dataGridView1.Columns["DiscountId"].Visible = false;
+                dataGridView1.Columns["CartItems"].Visible = false;
+                dataGridView1.Columns["Category"].Visible = false;
+                dataGridView1.Columns["Discount"].Visible = false;
+                dataGridView1.Columns["OrderDetails"].Visible = false;
+                dataGridView1.Columns["CategoryId"].Visible = false;
+
+
+
+
 
                 if (isAdmin == false)
                 {
@@ -237,7 +252,7 @@ namespace SalesWinApp
 
             OrderDTO order = new OrderDTO()
             {
-                Freight = decimal.Parse(txtUnitPrice.Text),
+                Freight = 0,
                 MemberId = this.memberId,
                 OrderDate = DateTime.Now,
                 RequiredDate = null,

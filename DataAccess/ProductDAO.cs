@@ -38,8 +38,14 @@ namespace DataAccess
 
             try
             {
-
-                return mapper.Map(context.Products.ToList(), new List<ProductDTO>());
+                List<ProductDTO> list = new List<ProductDTO>();
+                List<Product> entities = context.Products.ToList();
+                foreach (Product product in entities)
+                {
+                    ProductDTO productDTO = mapper.Map(product, new ProductDTO());
+                    list.Add(productDTO);
+                }
+                return list;
 
             }
             catch (Exception ex)
@@ -106,7 +112,7 @@ namespace DataAccess
 
                 context.Products.Attach(entity);
 
-                var entry = context.Entry(product);
+                var entry = context.Entry(entity);
                 entry.State = EntityState.Modified;
 
                 context.SaveChanges();
@@ -207,7 +213,14 @@ namespace DataAccess
                 }
 
             }
-            return mapper.Map(query.ToList(), new List<ProductDTO>());
+            List<ProductDTO> list = new List<ProductDTO>();
+            List<Product> entities = query.ToList();
+            foreach (Product product in entities)
+            {
+                ProductDTO productDTO = mapper.Map(product, new ProductDTO());
+                list.Add(productDTO);
+            }
+            return list;
 
         }
     }

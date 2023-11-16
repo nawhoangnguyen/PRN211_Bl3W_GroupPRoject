@@ -61,6 +61,7 @@
             btnDelete = new Button();
             btnAdd = new Button();
             dataGridView1 = new DataGridView();
+            cboCategory = new ComboBox();
             groupBox1.SuspendLayout();
             grpSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -391,6 +392,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(102, 375);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
@@ -401,11 +403,20 @@
             dataGridView1.Size = new Size(920, 201);
             dataGridView1.TabIndex = 42;
             // 
+            // cboCategory
+            // 
+            cboCategory.FormattingEnabled = true;
+            cboCategory.Location = new Point(433, 93);
+            cboCategory.Name = "cboCategory";
+            cboCategory.Size = new Size(145, 23);
+            cboCategory.TabIndex = 65;
+            // 
             // frmProducts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1124, 620);
+            Controls.Add(cboCategory);
             Controls.Add(btnLoad2);
             Controls.Add(btnBuy);
             Controls.Add(groupBox1);
@@ -474,5 +485,6 @@
         private Button btnDelete;
         private Button btnAdd;
         private DataGridView dataGridView1;
+        private ComboBox cboCategory;
     }
 }

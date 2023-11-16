@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess;
 using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,13 @@ namespace SalesWinApp
                 txtCity.DataBindings.Clear();
 
                 txtMemberId.DataBindings.Add("Text", source, "MemberId");
+                /*  if (!isAdmin)
+                  {
+                      txtPassword.DataBindings.Add("Text", source, "Password");
+
+                  }*/
                 txtPassword.DataBindings.Add("Text", source, "Password");
+
                 txtEmail.DataBindings.Add("Text", source, "Email");
                 txtCompanyName.DataBindings.Add("Text", source, "CompanyName");
                 txtCity.DataBindings.Add("Text", source, "City");
@@ -61,7 +68,9 @@ namespace SalesWinApp
 
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
-
+                dataGridView1.Columns["Password"].Visible = false;
+                dataGridView1.Columns["Orders"].Visible = false;
+                dataGridView1.Columns["ShoppingSessions"].Visible = false;
                 if (isAdmin == false)
                 {
                     if (members.Count() == 0)
@@ -132,13 +141,13 @@ namespace SalesWinApp
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you sure you want to delete this member ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 int id = Int32.Parse(txtMemberId.Text);
                 memberRepository.Delete(id);
                 LoadMember();
             }
-          
+
         }
 
         private void frmMembers_Load_1(object sender, EventArgs e)

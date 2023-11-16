@@ -79,3 +79,4 @@ D:\2023_Semester5_FALL\PRN211\NhatTQ6\Assignment\Assignments\Ass02Solution\Sales
 D:\2023_Semester5_FALL\PRN211\NhatTQ6\Assignment\Assignments\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProducts.resources
 D:\2023_Semester5_FALL\PRN211\NhatTQ6\Assignment\Assignments\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmProductDetail.resources
 D:\2023_Semester5_FALL\PRN211\NhatTQ6\Assignment\Assignments\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmMemberDetail.resources
+D:\2023_Semester5_FALL\PRN211\NhatTQ6\Assignment\Assignments\Ass02Solution\SalesWinApp\bin\Debug\net6.0-windows\AutoMapper.dll

@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Fmqpw9+0cSB3KuDhgjgWLK+Yuc5qIZzmBHAEZcW7y93cYe0kjRGidHouHjTvSLAazC2mOz9RM898fBLHq8clfQ==",
+  "dgSpecHash": "Dv8MSsbEQ1w1dkf2fN+HPpJOu4s20w5bbgHak+6spZxHDXQij820EkIoWUJm50a/dAtQ+yr+MNo/kn0cEjerMw==",
   "success": true,
   "projectFilePath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.0.4\\microsoft.dotnet.platformabstractions.2.0.4.nupkg.sha512",
