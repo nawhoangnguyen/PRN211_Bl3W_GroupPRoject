@@ -1,15 +1,7 @@
 ﻿using BusinessObject.Models;
 using DataAccess;
 using DataAccess.Repository;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -19,6 +11,7 @@ namespace SalesWinApp
 
 
         IProductRepository productRepository = new ProductRepository();
+        IDiscountRepository discountRepository = new DiscountRepository();
         public bool action { get; set; }
         public int idToUpdate { get; set; }
         public frmProductDetail()
@@ -26,12 +19,27 @@ namespace SalesWinApp
             InitializeComponent();
         }
 
+        private CategoryDTO GetCategory(string name)
+        {
+
+            List<CategoryDTO> categories = CategoryDAO.Instance.GetCategories();
+            CategoryDTO category = categories.Where(p => p.CategoryName.Equals(name)).SingleOrDefault();
+            return category;
+
+        }
+        private DiscountDTO GetDiscount(Decimal discount)
+        {
+            List<DiscountDTO> discountDTOs = discountRepository.GetAll();
+            DiscountDTO discountDTO = discountDTOs.Where(p => p.DiscountPercent == discount).SingleOrDefault();
+            return discountDTO;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
 
             ProductDTO product = new ProductDTO()
             {
-                CategoryId = Int32.Parse(txtCategoryId.Text),
+                CategoryId = GetCategory(cboCategoryId.SelectedItem.ToString()).CategoryId,
+                DiscountId = GetDiscount(Decimal.Parse(cboDiscount.SelectedItem.ToString())).DiscountId,
                 Weight = txtWeight.Text,
                 ProductName = txtProductName.Text,
                 UnitPrice = Decimal.Parse(txtUnitPrice.Text),
@@ -39,6 +47,7 @@ namespace SalesWinApp
             };
 
 
+            product.UnitPrice = product.UnitPrice - product.UnitPrice * (Decimal.Parse(cboDiscount.SelectedItem.ToString()) / 100);
             if (action == true)
             {
 
@@ -68,13 +77,78 @@ namespace SalesWinApp
             if (!action)
             {
                 ProductDTO product = productRepository.GetOneById(idToUpdate);
+                var Categories = CategoryDAO.Instance.GetCategories();
+                var Discounts = discountRepository.GetAll();
+
+
+
+                var Category = Categories.Where(p => p.CategoryId == product.CategoryId).SingleOrDefault();
+                var Discount = Discounts.Where(P => P.DiscountId == product.DiscountId);
+
+                int count = 0;
+                int count2 = 0;
+                foreach (var category in Categories)
+                {
+                    if (category.CategoryName.Equals(Category.CategoryName))
+                    {
+
+                        break;
+                    }
+                    count++;
+                }
+                foreach (var discount in Discounts)
+                {
+                    if (discount.DiscountId.Equals(discount.DiscountId))
+                    {
+
+                        break;
+                    }
+                    count2++;
+                }
+
+
+                foreach (var category in Categories)
+                {
+
+                    cboCategoryId.Items.Add(category.CategoryName);
+
+                }
+                foreach (var discounts in Discounts)
+                {
+
+                    cboDiscount.Items.Add(discounts.DiscountPercent);
+
+                }
+
 
                 txtProductId.Text = product.ProductId.ToString();
-                txtCategoryId.Text = product.CategoryId.ToString();
+                cboCategoryId.SelectedIndex = count;
+                cboDiscount.SelectedIndex = count2;
                 txtProductName.Text = product.ProductName;
                 txtUnitPrice.Text = product.UnitPrice.ToString();
                 txtUnitsInStock.Text = product.UnitsInStock.ToString();
                 txtWeight.Text = product.Weight;
+
+
+
+            }
+            else
+            {
+                var Discounts = discountRepository.GetAll();
+                var Categories = CategoryDAO.Instance.GetCategories();
+
+                foreach (var category in Categories)
+                {
+
+                    cboCategoryId.Items.Add(category.CategoryName);
+
+                }
+                foreach (var discounts in Discounts)
+                {
+
+                    cboDiscount.Items.Add(discounts.DiscountPercent);
+
+                }
 
             }
 

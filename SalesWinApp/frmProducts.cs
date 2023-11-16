@@ -2,15 +2,6 @@
 using DataAccess;
 using DataAccess.Repository;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -80,6 +71,8 @@ namespace SalesWinApp
                 cboCategory.DataSource = CategoryDAO.Instance.GetCategories();
                 cboCategory.DisplayMember = "CategoryName";
                 cboCategory.ValueMember = "CategoryId";
+
+
 
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
@@ -218,6 +211,10 @@ namespace SalesWinApp
         {
 
             bool check = true;
+            /* if (radId.Checked)
+             {
+                 check = false;
+             }*/
 
             try
             {
@@ -326,6 +323,27 @@ namespace SalesWinApp
 
             frmCart.ShowDialog();
             this.Hide();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var selectedProduct = (ProductDTO)dataGridView1.SelectedRows[0].DataBoundItem;
+                try
+                {
+                    DiscountDTO discountDTO = DiscountDAO.Instance.GetDiscountId(Int32.Parse(selectedProduct.DiscountId.ToString()));
+                    if(discountDTO != null)
+                        txtDiscount.Text = discountDTO.DiscountPercent.ToString();
+
+
+                }
+                catch (Exception ex) {
+                    txtDiscount.Text = "0";
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
         }
     }
 }

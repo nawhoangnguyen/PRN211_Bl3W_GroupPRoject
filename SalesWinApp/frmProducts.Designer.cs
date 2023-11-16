@@ -62,6 +62,8 @@
             cboCategory = new ComboBox();
             btnAddToCart = new Button();
             btnViewCart = new Button();
+            txtDiscount = new TextBox();
+            label10 = new Label();
             groupBox1.SuspendLayout();
             grpSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -196,7 +198,7 @@
             txtSearch.Margin = new Padding(3, 2, 3, 2);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Search By Product Name";
-            txtSearch.Size = new Size(218, 23);
+            txtSearch.Size = new Size(191, 23);
             txtSearch.TabIndex = 40;
             // 
             // label7
@@ -209,7 +211,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(316, 34);
+            btnSearch.Location = new Point(275, 37);
             btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(82, 22);
@@ -299,20 +301,21 @@
             // 
             // txtCategoryId
             // 
-            txtCategoryId.Location = new Point(243, 93);
+            txtCategoryId.Location = new Point(445, 93);
             txtCategoryId.Margin = new Padding(3, 2, 3, 2);
             txtCategoryId.Name = "txtCategoryId";
             txtCategoryId.Size = new Size(184, 23);
             txtCategoryId.TabIndex = 49;
+            txtCategoryId.Visible = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(140, 98);
             label2.Name = "label2";
-            label2.Size = new Size(65, 15);
+            label2.Size = new Size(55, 15);
             label2.TabIndex = 48;
-            label2.Text = "CategoryId";
+            label2.Text = "Category";
             // 
             // txtProductId
             // 
@@ -376,13 +379,15 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(920, 201);
             dataGridView1.TabIndex = 42;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // cboCategory
             // 
+            cboCategory.Enabled = false;
             cboCategory.FormattingEnabled = true;
-            cboCategory.Location = new Point(433, 93);
+            cboCategory.Location = new Point(243, 93);
             cboCategory.Name = "cboCategory";
-            cboCategory.Size = new Size(145, 23);
+            cboCategory.Size = new Size(184, 23);
             cboCategory.TabIndex = 65;
             // 
             // btnAddToCart
@@ -408,11 +413,30 @@
             btnViewCart.Visible = false;
             btnViewCart.Click += btnViewCart_Click;
             // 
+            // txtDiscount
+            // 
+            txtDiscount.Location = new Point(572, 143);
+            txtDiscount.Margin = new Padding(3, 2, 3, 2);
+            txtDiscount.Name = "txtDiscount";
+            txtDiscount.Size = new Size(84, 23);
+            txtDiscount.TabIndex = 69;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(482, 149);
+            label10.Name = "label10";
+            label10.Size = new Size(72, 15);
+            label10.TabIndex = 68;
+            label10.Text = "Discount(%)";
+            // 
             // frmProducts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1124, 620);
+            Controls.Add(txtDiscount);
+            Controls.Add(label10);
             Controls.Add(btnViewCart);
             Controls.Add(btnAddToCart);
             Controls.Add(cboCategory);
@@ -485,5 +509,7 @@
         private ComboBox cboCategory;
         private Button btnAddToCart;
         private Button btnViewCart;
+        private TextBox txtDiscount;
+        private Label label10;
     }
 }

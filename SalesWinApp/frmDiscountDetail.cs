@@ -21,14 +21,14 @@ namespace SalesWinApp
         public frmDiscountDetail()
         {
             InitializeComponent();
-            txtDiscountId.Enabled= false;
+            txtDiscountId.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             DiscountDTO discount = new DiscountDTO()
             {
-                DiscountId= idToUpdate,
+                DiscountId = idToUpdate,
                 DiscountName = txtDiscountName.Text,
                 Description = txtDescription.Text,
                 DiscountPercent = Decimal.Parse(txtPercent.Value.ToString())
@@ -46,7 +46,7 @@ namespace SalesWinApp
                 discountRepository.Update(discount);
             }
 
-         
+
             this.Hide();
         }
 
@@ -57,7 +57,7 @@ namespace SalesWinApp
 
         private void DiscountDetail_Load(object sender, EventArgs e)
         {
-            txtDiscountId.Enabled= false;
+            txtDiscountId.Enabled = false;
             if (!action)
             {
                 DiscountDTO discount = discountRepository.GetDiscountDTO(idToUpdate);
@@ -74,6 +74,11 @@ namespace SalesWinApp
                     // Handle the case when DiscountPercent is null, e.g., assign a default value or show an error message.
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

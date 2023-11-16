@@ -33,6 +33,7 @@
             tsProduct = new ToolStripMenuItem();
             tsOrder = new ToolStripMenuItem();
             postToolStripMenuItem = new ToolStripMenuItem();
+            discountToolStripMenuItem = new ToolStripMenuItem();
             btnLogout = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -40,7 +41,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tsMember, tsProduct, tsOrder, postToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tsMember, tsProduct, tsOrder, postToolStripMenuItem, discountToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -75,6 +76,13 @@
             postToolStripMenuItem.Text = "Post";
             postToolStripMenuItem.Click += postToolStripMenuItem_Click;
             // 
+            // discountToolStripMenuItem
+            // 
+            discountToolStripMenuItem.Name = "discountToolStripMenuItem";
+            discountToolStripMenuItem.Size = new Size(66, 20);
+            discountToolStripMenuItem.Text = "Discount";
+            discountToolStripMenuItem.Click += discountToolStripMenuItem_Click;
+            // 
             // btnLogout
             // 
             btnLogout.Location = new Point(695, 407);
@@ -95,6 +103,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "frmMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             Load += frmMain_Load_1;
             menuStrip1.ResumeLayout(false);
@@ -110,6 +119,7 @@
         private ToolStripMenuItem tsProduct;
         private ToolStripMenuItem tsOrder;
         private ToolStripMenuItem postToolStripMenuItem;
+        private ToolStripMenuItem discountToolStripMenuItem;
         private Button btnLogout;
     }
 }

@@ -1,12 +1,5 @@
-﻿using AutoMapper;
-using AutoMapper.Execution;
-using BusinessObject;
+﻿using BusinessObject;
 using BusinessObject.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess
 {
@@ -62,7 +55,7 @@ namespace DataAccess
                 {
                     CartItemDTO c = mapper.Map(entity, new CartItemDTO());
                     list.Add(c);
-                    
+
                 }
                 return list;
 

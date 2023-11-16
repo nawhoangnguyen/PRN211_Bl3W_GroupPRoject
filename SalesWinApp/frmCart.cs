@@ -2,15 +2,7 @@
 using DataAccess;
 using DataAccess.Repository;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -48,8 +40,8 @@ namespace SalesWinApp
                     ProductDTO product = productRepository.GetOneById(cartItem.ProductId);
                     products.Add(product);
                 }
-              
-                 
+
+
 
                 source = new BindingSource();
                 source.DataSource = products;
@@ -69,7 +61,7 @@ namespace SalesWinApp
                 cboCategory.DataSource = CategoryDAO.Instance.GetCategories();
                 cboCategory.DisplayMember = "CategoryName";
                 cboCategory.ValueMember = "CategoryId";
-                    
+
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
 

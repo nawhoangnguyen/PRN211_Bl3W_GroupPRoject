@@ -28,165 +28,166 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtDescript = new System.Windows.Forms.TextBox();
-            this.txtPercent = new System.Windows.Forms.NumericUpDown();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPercent)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            txtID = new TextBox();
+            txtName = new TextBox();
+            txtDescript = new TextBox();
+            txtPercent = new NumericUpDown();
+            btnAdd = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtPercent).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 317);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(817, 368);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(10, 238);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(715, 276);
+            dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Discount ID";
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Discount ID";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "DiscountCode";
+            label2.AutoSize = true;
+            label2.Location = new Point(19, 92);
+            label2.Name = "label2";
+            label2.Size = new Size(82, 15);
+            label2.TabIndex = 2;
+            label2.Text = "DiscountCode";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(446, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Description";
+            label3.AutoSize = true;
+            label3.Location = new Point(390, 50);
+            label3.Name = "label3";
+            label3.Size = new Size(67, 15);
+            label3.TabIndex = 3;
+            label3.Text = "Description";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(446, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Discount Percent";
+            label4.AutoSize = true;
+            label4.Location = new Point(390, 87);
+            label4.Name = "label4";
+            label4.Size = new Size(97, 15);
+            label4.TabIndex = 4;
+            label4.Text = "Discount Percent";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(159, 60);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(223, 27);
-            this.txtID.TabIndex = 6;
+            txtID.Location = new Point(139, 45);
+            txtID.Margin = new Padding(3, 2, 3, 2);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(196, 23);
+            txtID.TabIndex = 6;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(159, 120);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(223, 27);
-            this.txtName.TabIndex = 7;
+            txtName.Location = new Point(139, 90);
+            txtName.Margin = new Padding(3, 2, 3, 2);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(196, 23);
+            txtName.TabIndex = 7;
             // 
             // txtDescript
             // 
-            this.txtDescript.Location = new System.Drawing.Point(581, 60);
-            this.txtDescript.Name = "txtDescript";
-            this.txtDescript.Size = new System.Drawing.Size(223, 27);
-            this.txtDescript.TabIndex = 8;
+            txtDescript.Location = new Point(508, 45);
+            txtDescript.Margin = new Padding(3, 2, 3, 2);
+            txtDescript.Name = "txtDescript";
+            txtDescript.Size = new Size(196, 23);
+            txtDescript.TabIndex = 8;
             // 
             // txtPercent
             // 
-            this.txtPercent.DecimalPlaces = 1;
-            this.txtPercent.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.txtPercent.Location = new System.Drawing.Point(588, 106);
-            this.txtPercent.Maximum = new decimal(new int[] {
-            90,
-            0,
-            0,
-            0});
-            this.txtPercent.Name = "txtPercent";
-            this.txtPercent.Size = new System.Drawing.Size(150, 27);
-            this.txtPercent.TabIndex = 9;
+            txtPercent.DecimalPlaces = 1;
+            txtPercent.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            txtPercent.Location = new Point(514, 80);
+            txtPercent.Margin = new Padding(3, 2, 3, 2);
+            txtPercent.Maximum = new decimal(new int[] { 90, 0, 0, 0 });
+            txtPercent.Name = "txtPercent";
+            txtPercent.Size = new Size(131, 23);
+            txtPercent.TabIndex = 9;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(75, 235);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 29);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            btnAdd.Location = new Point(66, 176);
+            btnAdd.Margin = new Padding(3, 2, 3, 2);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(82, 22);
+            btnAdd.TabIndex = 11;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(313, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(274, 176);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 12;
+            button1.Text = "Update";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(522, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(457, 176);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(82, 22);
+            button2.TabIndex = 13;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // frmDiscount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 692);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtPercent);
-            this.Controls.Add(this.txtDescript);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "frmDiscount";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDiscount";
-            this.Load += new System.EventHandler(this.frmDiscount_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPercent)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(740, 519);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(btnAdd);
+            Controls.Add(txtPercent);
+            Controls.Add(txtDescript);
+            Controls.Add(txtName);
+            Controls.Add(txtID);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "frmDiscount";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Discount";
+            Load += frmDiscount_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtPercent).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

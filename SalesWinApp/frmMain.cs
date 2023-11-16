@@ -69,6 +69,7 @@ namespace SalesWinApp
                 tsMember.Text = "Profile";
                 tsProduct.Text = "Product List";
                 tsOrder.Text = "Order History";
+                discountToolStripMenuItem.Visible = false;
             }
         }
 
@@ -95,6 +96,16 @@ namespace SalesWinApp
             frmPosts.ShowDialog();
         }
 
+        private void discountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDiscount frmDiscount = new frmDiscount()
+            {
+
+                isAdmin = this.isAdmin,
+                memberId = this.memberId
+            };
+            frmDiscount.ShowDialog();
+        }
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Hide();

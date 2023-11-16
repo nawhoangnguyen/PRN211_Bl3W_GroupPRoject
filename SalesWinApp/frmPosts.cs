@@ -107,6 +107,7 @@ namespace SalesWinApp
                 btnAdd.Visible = false;
                 btnUpdate.Visible = false;
                 btnLoad.Visible = false;
+
             }
             txtContent.ReadOnly = true;
             cboSort.SelectedIndex = 0;
@@ -116,9 +117,11 @@ namespace SalesWinApp
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
+
             frmPostDetail frmPostDetail = new frmPostDetail()
             {
                 InsertOrUpdate = true,
+
 
             };
 

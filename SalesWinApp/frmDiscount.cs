@@ -32,10 +32,10 @@ namespace SalesWinApp
         {
             try
             {
-                txtID.Enabled= false;
-                txtName.Enabled= false;
-                txtDescript.Enabled= false;
-                txtPercent.Enabled= false;
+                txtID.Enabled = false;
+                txtName.Enabled = false;
+                txtDescript.Enabled = false;
+                txtPercent.Enabled = false;
                 List<DiscountDTO> discounts = new List<DiscountDTO>();
                 if (discountDTOs.IsNullOrEmpty())
                 {
@@ -56,13 +56,13 @@ namespace SalesWinApp
 
                 txtID.DataBindings.Add("Text", source, "DiscountId");
                 txtName.DataBindings.Add("Text", source, "DiscountName");
-                txtDescript.DataBindings.Add("Text",source, "Description");
+                txtDescript.DataBindings.Add("Text", source, "Description");
                 txtPercent.DataBindings.Add("Text", source, "DiscountPercent");
 
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
 
-                dataGridView1.Columns["Products"].Visible=false;
+                dataGridView1.Columns["Products"].Visible = false;
 
 
             }
@@ -88,7 +88,7 @@ namespace SalesWinApp
             {
                 action = false,
                 idToUpdate = Int32.Parse(txtID.Text)
-                
+
             };
             if (frm.ShowDialog() == DialogResult.OK)
             {
