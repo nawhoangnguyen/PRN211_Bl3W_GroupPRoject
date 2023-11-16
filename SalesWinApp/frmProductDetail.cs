@@ -50,13 +50,13 @@ namespace SalesWinApp
             else
             {
                 product.ProductId = idToUpdate;
-
                 productRepository.Update(product);
             }
-          /*  this.Hide();
-            frmProducts frmProducts = new frmProducts();*/
-            this.Close();
-              
+            /*  this.Hide();
+              frmProducts frmProducts = new frmProducts();*/
+            this.Hide();
+            this.DialogResult = DialogResult.OK;
+
 
 
 

@@ -107,6 +107,7 @@ namespace DataAccess
         {
             try
             {
+<<<<<<< HEAD
                 // Tìm kiếm thực thể Product trong cơ sở dữ liệu dựa trên ID
                 Product productToUpdate = context.Products.Find(productDto.ProductId);
 
@@ -120,6 +121,29 @@ namespace DataAccess
                     productToUpdate.UnitsInStock = productDto.UnitsInStock;
                     productToUpdate.DiscountId = productDto.DiscountId;
                     // Cập nhật các thuộc tính khác nếu cần
+=======
+                Product entity = new Product();
+                entity = mapper.Map(product, new Product());
+/*
+                context.Products.Attach(entity);
+
+                var entry = context.Entry(entity);
+                entry.State = EntityState.Modified;
+
+                context.SaveChanges();*/
+               
+
+                //============================
+
+                // Attach the entity to the context
+                var entityEntry = context.Attach(entity);
+
+                // Set the current values to the updated values
+                entityEntry.CurrentValues.SetValues(entity);
+
+                // Save changes to persist the modifications to the database
+                context.SaveChanges();
+>>>>>>> 583edea302185894d2c12b8f704e4015ddbfa5c7
 
                     // Lưu thay đổi vào cơ sở dữ liệu
                     context.SaveChanges();
@@ -236,5 +260,8 @@ namespace DataAccess
             return list;
 
         }
+
+       
+
     }
 }

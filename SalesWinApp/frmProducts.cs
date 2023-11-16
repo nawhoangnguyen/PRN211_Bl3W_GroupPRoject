@@ -21,8 +21,9 @@ namespace SalesWinApp
         IOrderRepository orderRepository = new OrderRepository();
         IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         public bool isAdmin { get; set; }
-
         public int memberId { get; set; }
+        public ShoppingSessionDTO shoppingSession { get; set; }
+
         BindingSource source;
         public frmProducts()
         {
@@ -134,7 +135,12 @@ namespace SalesWinApp
             {
                 action = true
             };
-            frmProductDetail.ShowDialog();
+
+            if (frmProductDetail.ShowDialog() == DialogResult.OK)
+            {
+                LoadProduct(null);
+                source.Position = source.Count - 1;
+            }
         }
 
         private void frmProducts_Load(object sender, EventArgs e)
@@ -159,6 +165,7 @@ namespace SalesWinApp
 
                 btnBuy.Visible = false;
                 btnLoad2.Visible = false;
+                btnAddToCart.Visible = false;
             }
         }
 
@@ -172,6 +179,8 @@ namespace SalesWinApp
                 LoadProduct(null);
             }
         }
+
+
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -205,10 +214,10 @@ namespace SalesWinApp
         {
 
             bool check = true;
-            if (radId.Checked)
+           /* if (radId.Checked)
             {
                 check = false;
-            }
+            }*/
             try
             {
                 LoadProduct(productRepository.SearchByNameAndIdOrSortByUnitPriceAndUnitsPriceInStock(txtSearch.Text, null, null, check));
@@ -254,7 +263,7 @@ namespace SalesWinApp
 
             OrderDTO order = new OrderDTO()
             {
-                Freight = 0,
+                Freight = null,
                 MemberId = this.memberId,
                 OrderDate = DateTime.Now,
                 RequiredDate = null,
@@ -288,6 +297,34 @@ namespace SalesWinApp
         private void memberToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Add to cart successfully!!");
+            CartItemDTO cartItem = new CartItemDTO()
+            {
+                ShoppingSessionId = shoppingSession.ShoppingId,
+                ProductId = Int32.Parse(txtProductId.Text),
+                Quantity = 1,
+            };
+
+            CartItemDAO.Instance.Add(cartItem);
+
+            shoppingSession.Total = shoppingSession.Total + Decimal.Parse(txtUnitPrice.Text);
+        }
+
+        private void btnViewCart_Click(object sender, EventArgs e)
+        {
+            frmCart frmCart = new frmCart()
+            {
+                memberId= memberId,
+                shoppingSession = shoppingSession
+            };
+
+            frmCart.ShowDialog();
+            this.Hide();
         }
     }
 }

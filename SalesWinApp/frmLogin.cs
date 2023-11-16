@@ -1,4 +1,6 @@
-﻿using DataAccess.Repository;
+﻿using BusinessObject.Models;
+using DataAccess;
+using DataAccess.Repository;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -38,12 +40,27 @@ namespace SalesWinApp
             else if (memberRepositor.Login(txtEmail.Text, txtPassword.Text) != null)
             {
                 this.Hide();
+                ShoppingSessionDTO shoppingSession = ShoppingSessionDAO.Instance.GetShoppingSessionByUserId(memberRepositor.Login(txtEmail.Text, txtPassword.Text).MemberId);
+                if(shoppingSession == null)
+                {
+                    shoppingSession = new ShoppingSessionDTO()
+                    {
+                        MemberId = memberRepositor.Login(txtEmail.Text, txtPassword.Text).MemberId,
+                        Total = 0,
+                    };
+                    ShoppingSessionDAO.Instance.Add(shoppingSession);
+
+                }
+
                 frmMain frmMain = new frmMain()
                 {
                     isAdmin = false,
-                    memberId = memberRepositor.Login(txtEmail.Text, txtPassword.Text).MemberId
+                    memberId = memberRepositor.Login(txtEmail.Text, txtPassword.Text).MemberId,
+                    shoppingSession = shoppingSession
                 };
                 frmMain.ShowDialog();
+            
+
             }
             else
             {

@@ -94,7 +94,7 @@ namespace DataAccess
                 entity = mapper.Map(order, entity);
                 context.Orders.Add(entity);
                 context.SaveChanges();
-
+                order = mapper.Map(entity, order);  
 
                 return order;
             }

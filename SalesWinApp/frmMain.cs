@@ -1,13 +1,4 @@
 ﻿using BusinessObject.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -15,6 +6,8 @@ namespace SalesWinApp
     {
         public bool isAdmin { get; set; }
         public int memberId { get; set; }
+        public ShoppingSessionDTO shoppingSession { get; set; }
+
         public frmMain()
         {
 
@@ -61,7 +54,9 @@ namespace SalesWinApp
             frmProducts frmProducts = new frmProducts()
             {
                 isAdmin = this.isAdmin,
-                memberId = this.memberId
+                memberId = this.memberId,
+                shoppingSession = shoppingSession
+
             };
             frmProducts.ShowDialog();
 
@@ -79,7 +74,7 @@ namespace SalesWinApp
 
         private void tsOrder_Click(object sender, EventArgs e)
         {
-           
+
             frmOrders frmOrders = new frmOrders()
             {
 
@@ -89,6 +84,15 @@ namespace SalesWinApp
             frmOrders.ShowDialog();
         }
 
+        private void postToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPosts frmPosts = new frmPosts()
+            {
 
+                isAdmin = this.isAdmin,
+                memberId = this.memberId
+            };
+            frmPosts.ShowDialog();
+        }
     }
 }

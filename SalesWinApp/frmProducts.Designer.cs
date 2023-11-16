@@ -42,8 +42,6 @@
             txtSearch = new TextBox();
             label7 = new Label();
             btnSearch = new Button();
-            radId = new RadioButton();
-            radName = new RadioButton();
             btnLoad = new Button();
             txtUnitsInStock = new TextBox();
             label6 = new Label();
@@ -62,6 +60,8 @@
             btnAdd = new Button();
             dataGridView1 = new DataGridView();
             cboCategory = new ComboBox();
+            btnAddToCart = new Button();
+            btnViewCart = new Button();
             groupBox1.SuspendLayout();
             grpSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -181,8 +181,6 @@
             grpSearch.Controls.Add(txtSearch);
             grpSearch.Controls.Add(label7);
             grpSearch.Controls.Add(btnSearch);
-            grpSearch.Controls.Add(radId);
-            grpSearch.Controls.Add(radName);
             grpSearch.Location = new Point(135, 234);
             grpSearch.Margin = new Padding(3, 2, 3, 2);
             grpSearch.Name = "grpSearch";
@@ -211,7 +209,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(142, 61);
+            btnSearch.Location = new Point(322, 39);
             btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(82, 22);
@@ -219,30 +217,6 @@
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += btnSearch_Click;
-            // 
-            // radId
-            // 
-            radId.AutoSize = true;
-            radId.Location = new Point(340, 19);
-            radId.Margin = new Padding(3, 2, 3, 2);
-            radId.Name = "radId";
-            radId.Size = new Size(51, 19);
-            radId.TabIndex = 36;
-            radId.TabStop = true;
-            radId.Text = "By Id";
-            radId.UseVisualStyleBackColor = true;
-            // 
-            // radName
-            // 
-            radName.AutoSize = true;
-            radName.Location = new Point(340, 60);
-            radName.Margin = new Padding(3, 2, 3, 2);
-            radName.Name = "radName";
-            radName.Size = new Size(73, 19);
-            radName.TabIndex = 37;
-            radName.TabStop = true;
-            radName.Text = "By Name";
-            radName.UseVisualStyleBackColor = true;
             // 
             // btnLoad
             // 
@@ -411,11 +385,34 @@
             cboCategory.Size = new Size(145, 23);
             cboCategory.TabIndex = 65;
             // 
+            // btnAddToCart
+            // 
+            btnAddToCart.Location = new Point(834, 347);
+            btnAddToCart.Name = "btnAddToCart";
+            btnAddToCart.Size = new Size(92, 23);
+            btnAddToCart.TabIndex = 66;
+            btnAddToCart.Text = "Add To Cart";
+            btnAddToCart.UseVisualStyleBackColor = true;
+            btnAddToCart.Click += btnAddToCart_Click;
+            // 
+            // btnViewCart
+            // 
+            btnViewCart.Location = new Point(947, 347);
+            btnViewCart.Name = "btnViewCart";
+            btnViewCart.Size = new Size(75, 23);
+            btnViewCart.TabIndex = 67;
+            btnViewCart.Text = "View Cart";
+            btnViewCart.TextAlign = ContentAlignment.TopCenter;
+            btnViewCart.UseVisualStyleBackColor = true;
+            btnViewCart.Click += btnViewCart_Click;
+            // 
             // frmProducts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1124, 620);
+            Controls.Add(btnViewCart);
+            Controls.Add(btnAddToCart);
             Controls.Add(cboCategory);
             Controls.Add(btnLoad2);
             Controls.Add(btnBuy);
@@ -466,8 +463,6 @@
         private TextBox txtSearch;
         private Label label7;
         private Button btnSearch;
-        private RadioButton radId;
-        private RadioButton radName;
         private Button btnLoad;
         private TextBox txtUnitsInStock;
         private Label label6;
@@ -486,5 +481,7 @@
         private Button btnAdd;
         private DataGridView dataGridView1;
         private ComboBox cboCategory;
+        private Button btnAddToCart;
+        private Button btnViewCart;
     }
 }
