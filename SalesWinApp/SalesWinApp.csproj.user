@@ -25,7 +25,7 @@
     <Compile Update="frmPostDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmPosts - Copy.cs">
+    <Compile Update="frmPosts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmProductDetail.cs">
