@@ -62,24 +62,27 @@ namespace SalesWinApp
                 memberRepository.Update(member);
             }
             this.Hide();
-            if(isAdmin)
+            if (isAdmin)
             {
-                frmMembers frmMembers = new frmMembers() {
+                frmMembers frmMembers = new frmMembers()
+                {
                     isAdmin = this.isAdmin
                 };
                 this.Close();
                 frmMembers.ShowDialog();
-            } else
+            }
+            else
             {
-                frmMain frmMain = new frmMain() { 
-                     memberId = idToUpdate,
+                frmMain frmMain = new frmMain()
+                {
+                    memberId = idToUpdate,
                     isAdmin = this.isAdmin
 
                 };
                 this.Close();
                 frmMain.ShowDialog();
             }
-           
+
 
 
 

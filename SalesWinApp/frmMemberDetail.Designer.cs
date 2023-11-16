@@ -42,128 +42,134 @@
             label1 = new Label();
             btnSave = new Button();
             btnCancle = new Button();
+            label7 = new Label();
             SuspendLayout();
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(490, 114);
-            txtPassword.Margin = new Padding(3, 2, 3, 2);
+            txtPassword.Location = new Point(245, 407);
+            txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(184, 23);
+            txtPassword.Size = new Size(536, 41);
             txtPassword.TabIndex = 31;
             txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(424, 116);
+            label6.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(79, 409);
             label6.Name = "label6";
-            label6.Size = new Size(57, 15);
+            label6.Size = new Size(106, 22);
             label6.TabIndex = 30;
             label6.Text = "Password";
             label6.Click += label6_Click;
             // 
             // txtCountry
             // 
-            txtCountry.Location = new Point(490, 63);
-            txtCountry.Margin = new Padding(3, 2, 3, 2);
+            txtCountry.Location = new Point(245, 342);
+            txtCountry.Multiline = true;
             txtCountry.Name = "txtCountry";
-            txtCountry.Size = new Size(184, 23);
+            txtCountry.Size = new Size(536, 41);
             txtCountry.TabIndex = 29;
             txtCountry.TextChanged += txtCountry_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(424, 65);
+            label5.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(79, 344);
             label5.Name = "label5";
-            label5.Size = new Size(50, 15);
+            label5.Size = new Size(94, 22);
             label5.TabIndex = 28;
             label5.Text = "Country";
             label5.Click += label5_Click;
             // 
             // txtCity
             // 
-            txtCity.Location = new Point(488, 16);
-            txtCity.Margin = new Padding(3, 2, 3, 2);
+            txtCity.Location = new Point(245, 279);
+            txtCity.Multiline = true;
             txtCity.Name = "txtCity";
-            txtCity.Size = new Size(184, 23);
+            txtCity.Size = new Size(536, 41);
             txtCity.TabIndex = 27;
             txtCity.TextChanged += txtCity_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(424, 18);
+            label4.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(79, 281);
             label4.Name = "label4";
-            label4.Size = new Size(28, 15);
+            label4.Size = new Size(58, 22);
             label4.TabIndex = 26;
             label4.Text = "City";
             label4.Click += label4_Click;
             // 
             // txtCompanyName
             // 
-            txtCompanyName.Location = new Point(144, 114);
-            txtCompanyName.Margin = new Padding(3, 2, 3, 2);
+            txtCompanyName.Location = new Point(245, 218);
+            txtCompanyName.Multiline = true;
             txtCompanyName.Name = "txtCompanyName";
-            txtCompanyName.Size = new Size(184, 23);
+            txtCompanyName.Size = new Size(536, 41);
             txtCompanyName.TabIndex = 25;
             txtCompanyName.TextChanged += txtCompanyName_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(40, 116);
+            label3.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(79, 220);
             label3.Name = "label3";
-            label3.Size = new Size(91, 15);
+            label3.Size = new Size(142, 22);
             label3.TabIndex = 24;
             label3.Text = "CompanyName";
             label3.Click += label3_Click;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(144, 60);
-            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Location = new Point(245, 150);
+            txtEmail.Multiline = true;
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(184, 23);
+            txtEmail.Size = new Size(536, 41);
             txtEmail.TabIndex = 23;
             txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(40, 65);
+            label2.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(79, 152);
             label2.Name = "label2";
-            label2.Size = new Size(36, 15);
+            label2.Size = new Size(70, 22);
             label2.TabIndex = 22;
             label2.Text = "Email";
             label2.Click += label2_Click;
             // 
             // txtMemberId
             // 
-            txtMemberId.Location = new Point(144, 13);
-            txtMemberId.Margin = new Padding(3, 2, 3, 2);
+            txtMemberId.Location = new Point(245, 84);
+            txtMemberId.Multiline = true;
             txtMemberId.Name = "txtMemberId";
-            txtMemberId.Size = new Size(184, 23);
+            txtMemberId.Size = new Size(536, 41);
             txtMemberId.TabIndex = 21;
             txtMemberId.TextChanged += txtMemberId_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(40, 16);
+            label1.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(79, 86);
             label1.Name = "label1";
-            label1.Size = new Size(62, 15);
+            label1.Size = new Size(106, 22);
             label1.TabIndex = 20;
             label1.Text = "MemberId";
             label1.Click += label1_Click;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(144, 212);
-            btnSave.Margin = new Padding(3, 2, 3, 2);
+            btnSave.Location = new Point(245, 481);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(116, 31);
+            btnSave.Size = new Size(133, 41);
             btnSave.TabIndex = 32;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
@@ -171,20 +177,30 @@
             // 
             // btnCancle
             // 
-            btnCancle.Location = new Point(473, 212);
-            btnCancle.Margin = new Padding(3, 2, 3, 2);
+            btnCancle.Location = new Point(648, 481);
             btnCancle.Name = "btnCancle";
-            btnCancle.Size = new Size(116, 31);
+            btnCancle.Size = new Size(133, 41);
             btnCancle.TabIndex = 33;
             btnCancle.Text = "Cancel";
             btnCancle.UseVisualStyleBackColor = true;
             btnCancle.Click += btnCancle_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(392, 18);
+            label7.Name = "label7";
+            label7.Size = new Size(226, 41);
+            label7.TabIndex = 34;
+            label7.Text = "Member detail";
+            // 
             // frmMemberDetail
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(873, 558);
+            Controls.Add(label7);
             Controls.Add(btnCancle);
             Controls.Add(btnSave);
             Controls.Add(txtPassword);
@@ -199,8 +215,8 @@
             Controls.Add(label2);
             Controls.Add(txtMemberId);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "frmMemberDetail";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMemberDetail";
             Load += frmMemberDetail_Load;
             ResumeLayout(false);
@@ -223,5 +239,6 @@
         private Label label1;
         private Button btnSave;
         private Button btnCancle;
+        private Label label7;
     }
 }
