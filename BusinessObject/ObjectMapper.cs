@@ -10,7 +10,13 @@ namespace BusinessObject
     {
         public T Map<T>(object objfrom, T objto)
         {
+            if (objfrom == null)
+            {
+                return default;
+            }
+
             var ToProperties = objto.GetType().GetProperties();
+        
             var FromProperties = objfrom.GetType().GetProperties();
 
             ToProperties.ToList().ForEach(o =>

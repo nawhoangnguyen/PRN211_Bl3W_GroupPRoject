@@ -28,6 +28,8 @@ namespace SalesWinApp
         public frmProducts()
         {
             InitializeComponent();
+           
+
         }
         private void ClearText()
         {
