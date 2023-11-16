@@ -15,6 +15,8 @@ namespace SalesWinApp
     {
         public bool isAdmin { get; set; }
         public int memberId { get; set; }
+        public ShoppingSessionDTO shoppingSession { get; set; }
+
         public frmMain()
         {
 
@@ -61,7 +63,9 @@ namespace SalesWinApp
             frmProducts frmProducts = new frmProducts()
             {
                 isAdmin = this.isAdmin,
-                memberId = this.memberId
+                memberId = this.memberId,
+                shoppingSession = shoppingSession
+
             };
             frmProducts.ShowDialog();
 
@@ -79,7 +83,7 @@ namespace SalesWinApp
 
         private void tsOrder_Click(object sender, EventArgs e)
         {
-           
+
             frmOrders frmOrders = new frmOrders()
             {
 

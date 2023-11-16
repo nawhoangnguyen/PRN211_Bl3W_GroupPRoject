@@ -165,3 +165,5 @@ D:\FPT_University\PRN211\2_PRN211\2_PRN211\2_PRN211\Assignments\Group_Project\CS
 D:\FPT_University\PRN211\2_PRN211\2_PRN211\2_PRN211\Assignments\Group_Project\CSharp-ParrotShop\SalesWinApp\obj\Debug\net6.0-windows\ref\SalesWinApp.dll
 D:\FPT_University\PRN211\2_PRN211\2_PRN211\2_PRN211\Assignments\Group_Project\CSharp-ParrotShop\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.Properties.Resources.resources
 >>>>>>> 5a77dd7aea3c8db7a29ff107791ace3241039928
+D:\2023_Semester5_FALL\PRN211\NhatTQ6\Assignment\Assignments\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.Properties.Resources.resources
+D:\2023_Semester5_FALL\PRN211\NhatTQ6\Assignment\Assignments\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmCart.resources

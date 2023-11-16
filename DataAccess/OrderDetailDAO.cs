@@ -60,7 +60,7 @@ namespace DataAccess
                 OrderDetail entity = new OrderDetail();
                     entity = mapper.Map(orderDetail, entity);
                     context.OrderDetails.Add(entity);
-                    
+                context.SaveChanges();
                 
             }
             catch (Exception ex)

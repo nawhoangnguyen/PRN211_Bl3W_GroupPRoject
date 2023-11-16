@@ -108,13 +108,25 @@ namespace DataAccess
             try
             {
                 Product entity = new Product();
-                entity = mapper.Map(product, entity);
-
+                entity = mapper.Map(product, new Product());
+/*
                 context.Products.Attach(entity);
 
                 var entry = context.Entry(entity);
                 entry.State = EntityState.Modified;
 
+                context.SaveChanges();*/
+               
+
+                //============================
+
+                // Attach the entity to the context
+                var entityEntry = context.Attach(entity);
+
+                // Set the current values to the updated values
+                entityEntry.CurrentValues.SetValues(entity);
+
+                // Save changes to persist the modifications to the database
                 context.SaveChanges();
 
             }
