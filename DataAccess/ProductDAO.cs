@@ -122,7 +122,6 @@ namespace DataAccess
                     productToUpdate.DiscountId = productDto.DiscountId;
                     // Cập nhật các thuộc tính khác nếu cần
 
-                    // Lưu thay đổi vào cơ sở dữ liệu
                     context.SaveChanges();
                 }
                 else

@@ -1,6 +1,7 @@
 ﻿using BusinessObject.Models;
 using DataAccess;
 using DataAccess.Repository;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace SalesWinApp
 
         private void frmMembers_Load(object sender, EventArgs e)
         {
-            LoadMember();
+            LoadMember(null);
         }
         private void ClearText()
         {
@@ -38,11 +39,16 @@ namespace SalesWinApp
             txtPassword.Text = string.Empty;
             txtCity.Text = string.Empty;
         }
-        public void LoadMember()
+        public void LoadMember(List<MemberDTO> list)
         {
             try
             {
                 List<MemberDTO> members = memberRepository.GetAll();
+                if (!list.IsNullOrEmpty())
+                {
+                    members = list;
+                }
+
 
                 source = new BindingSource();
                 source.DataSource = members;
@@ -145,14 +151,14 @@ namespace SalesWinApp
             {
                 int id = Int32.Parse(txtMemberId.Text);
                 memberRepository.Delete(id);
-                LoadMember();
+                LoadMember(null);
             }
 
         }
 
         private void frmMembers_Load_1(object sender, EventArgs e)
         {
-            LoadMember();
+            LoadMember(null);
 
         }
 
@@ -170,5 +176,42 @@ namespace SalesWinApp
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string searchEmail = txtSearchEmail.Text.Trim();
+                List<MemberDTO> filteredMembers = memberRepository.GetAllByEmail(searchEmail);
+                LoadMember(filteredMembers);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string searchCity = txtSearchCity.Text.Trim();
+                if (!string.IsNullOrEmpty(searchCity))
+                {
+                    // Assuming the MemberRepository has a method to search by City
+                    List<MemberDTO> filteredMembers = memberRepository.GetAllByCity(searchCity);
+                    LoadMember(filteredMembers);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a city name to search.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
     }
+
 }

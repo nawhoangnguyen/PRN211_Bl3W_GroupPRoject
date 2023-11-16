@@ -154,11 +154,58 @@ namespace DataAccess
                 return null;
             }
         }
+        public List<MemberDTO> GetAllByEmail(string email)
+        {
+            try
+            {
+                // Retrieve all members with the given email
+                List<Member> members = context.Members.Where(m => m.Email.ToLower().Contains(email)).ToList();
 
-        
+                List<MemberDTO> memberDTOs = new List<MemberDTO>();
+                foreach (var member in members)
+                {
+                    MemberDTO dto = mapper.Map(member, new MemberDTO());
+                    memberDTOs.Add(dto);
+                }
+
+                return memberDTOs;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return new List<MemberDTO>(); // Return an empty list in case of an exception
+            }
+        }
+
+        public List<MemberDTO> GetAllByCity(string city)
+        {
+            try
+            {
+                // Retrieve all members whose city matches the specified city
+                List<Member> members = context.Members.Where(m => m.City.ToLower().Contains(city.ToLower())).ToList();
+
+                List<MemberDTO> memberDTOs = new List<MemberDTO>();
+                foreach (var member in members)
+                {
+                    MemberDTO dto = mapper.Map(member, new MemberDTO());
+                    memberDTOs.Add(dto);
+                }
+
+                return memberDTOs;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return new List<MemberDTO>(); // Return an empty list in case of an exception
+            }
+        }
+
+
+
+
 
     }
-    
+
 
 
 
