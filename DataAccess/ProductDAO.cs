@@ -103,26 +103,39 @@ namespace DataAccess
 
         }
 
-        public void Update(ProductDTO product)
+        public void Update(ProductDTO productDto)
         {
             try
             {
-                Product entity = new Product();
-                entity = mapper.Map(product, entity);
+                // Tìm kiếm thực thể Product trong cơ sở dữ liệu dựa trên ID
+                Product productToUpdate = context.Products.Find(productDto.ProductId);
 
-                context.Products.Attach(entity);
+                if (productToUpdate != null)
+                {
+                    // Cập nhật các thuộc tính của Product
+                    productToUpdate.CategoryId = productDto.CategoryId;
+                    productToUpdate.ProductName = productDto.ProductName;
+                    productToUpdate.Weight = productDto.Weight;
+                    productToUpdate.UnitPrice = productDto.UnitPrice;
+                    productToUpdate.UnitsInStock = productDto.UnitsInStock;
+                    productToUpdate.DiscountId = productDto.DiscountId;
+                    // Cập nhật các thuộc tính khác nếu cần
 
-                var entry = context.Entry(entity);
-                entry.State = EntityState.Modified;
-
-                context.SaveChanges();
-
+                    // Lưu thay đổi vào cơ sở dữ liệu
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("Product not found");
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                // Xử lý lỗi ở đây
             }
         }
+
 
         public void Delete(int id)
         {

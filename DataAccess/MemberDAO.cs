@@ -87,29 +87,35 @@ namespace DataAccess
             }
         }
 
-        public void Update(MemberDTO member)
+        public void Update(MemberDTO memberDto)
         {
             try
             {
-                Member entity = new Member();
-                entity = mapper.Map(member, entity);
-                // Attach the member to the context so that Entity Framework tracks the changes
-                context.Members.Attach(entity);
+                // Thay thế bằng ID thực tế của Member bạn muốn cập nhật
+                Member memberToUpdate = context.Members.Find(memberDto.MemberId);
 
-                    // Mark the member as modified, so Entity Framework knows to update it
-                    var entry = context.Entry(entity);
-                    entry.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                if (memberToUpdate != null)
+                {
+                    // Cập nhật các thuộc tính
+                    memberToUpdate.Email = memberDto.Email;
+                    memberToUpdate.CompanyName = memberDto.CompanyName;
+                    memberToUpdate.City = memberDto.City;
+                    memberToUpdate.Country = memberDto.Country;
+                    memberToUpdate.Password = memberDto.Password;
+                    // ... thêm bất kỳ thuộc tính cập nhật nào khác tại đây
 
-                    // Save the changes to the database
+                    // Lưu thay đổi để duy trì cập nhật
                     context.SaveChanges();
-
-
-                
-
-            } catch(Exception ex ) {
+                }
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex.Message);
             }
         }
+
+
+
 
         public void Delete(int id) { 
             try
