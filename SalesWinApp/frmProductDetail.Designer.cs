@@ -191,7 +191,7 @@
             Controls.Add(btnSave);
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmProductDetail";
-            Text = "frmProductDetail";
+            Text = "Product Details";
             Load += frmProductDetail_Load;
             ResumeLayout(false);
             PerformLayout();

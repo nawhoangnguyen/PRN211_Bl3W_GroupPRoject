@@ -130,7 +130,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmPostDetail";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmPostDetail";
+            Text = "Post Details";
             Load += frmPostDetail_Load;
             ResumeLayout(false);
             PerformLayout();

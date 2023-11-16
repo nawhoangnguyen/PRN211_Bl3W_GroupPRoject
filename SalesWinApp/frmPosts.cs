@@ -142,11 +142,11 @@ namespace SalesWinApp
         {
             string sortDate = null;
 
-            if (cboSort.Text == "Oldest")
+            if (cboSort.Text == "Newest")
             {
                 sortDate = "DESC";
             }
-            else if (cboSort.Text == "Newest")
+            else if (cboSort.Text == "Oldest")
             {
                 sortDate = "ASC";
             }

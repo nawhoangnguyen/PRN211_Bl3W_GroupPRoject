@@ -50,7 +50,8 @@ namespace SalesWinApp
         private void btnSave_Click(object sender, EventArgs e)
         {
             bool isValid = IsValidGmailAddress(txtEmail.Text);
-            if (!isValid) {
+            if (!isValid)
+            {
                 MessageBox.Show("Wrong gmail format !! - Please check input again");
                 return;
             }
