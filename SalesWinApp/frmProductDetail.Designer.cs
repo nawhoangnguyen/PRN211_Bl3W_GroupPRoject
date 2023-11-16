@@ -42,6 +42,8 @@
             txtProductId = new TextBox();
             label1 = new Label();
             cboCategoryId = new ComboBox();
+            label7 = new Label();
+            cboDiscount = new ComboBox();
             SuspendLayout();
             // 
             // btnCancel
@@ -70,6 +72,7 @@
             txtUnitsInStock.Name = "txtUnitsInStock";
             txtUnitsInStock.Size = new Size(210, 27);
             txtUnitsInStock.TabIndex = 59;
+            txtUnitsInStock.KeyPress += txtUnitsInStock_KeyPress;
             // 
             // label6
             // 
@@ -86,6 +89,7 @@
             txtUnitPrice.Name = "txtUnitPrice";
             txtUnitPrice.Size = new Size(210, 27);
             txtUnitPrice.TabIndex = 57;
+            txtUnitPrice.KeyPress += txtUnitPrice_KeyPress;
             // 
             // label5
             // 
@@ -161,11 +165,30 @@
             cboCategoryId.Size = new Size(210, 28);
             cboCategoryId.TabIndex = 60;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(265, 243);
+            label7.Name = "label7";
+            label7.Size = new Size(67, 20);
+            label7.TabIndex = 61;
+            label7.Text = "Discount";
+            // 
+            // cboDiscount
+            // 
+            cboDiscount.FormattingEnabled = true;
+            cboDiscount.Location = new Point(349, 240);
+            cboDiscount.Name = "cboDiscount";
+            cboDiscount.Size = new Size(199, 28);
+            cboDiscount.TabIndex = 62;
+            // 
             // frmProductDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 451);
+            Controls.Add(cboDiscount);
+            Controls.Add(label7);
             Controls.Add(cboCategoryId);
             Controls.Add(txtUnitsInStock);
             Controls.Add(label6);
@@ -203,5 +226,7 @@
         private TextBox txtProductId;
         private Label label1;
         private ComboBox cboCategoryId;
+        private Label label7;
+        private ComboBox cboDiscount;
     }
 }

@@ -122,6 +122,7 @@ namespace SalesWinApp
             {
                 InsertOrUpdate = true,
 
+
             };
 
             if (frmPostDetail.ShowDialog() == DialogResult.OK)

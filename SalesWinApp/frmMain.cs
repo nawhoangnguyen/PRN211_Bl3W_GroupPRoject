@@ -97,7 +97,13 @@ namespace SalesWinApp
 
         private void discountToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmDiscount frmDiscount = new frmDiscount()
+            {
 
+                isAdmin = this.isAdmin,
+                memberId = this.memberId
+            };
+            frmDiscount.ShowDialog();
         }
     }
 }
