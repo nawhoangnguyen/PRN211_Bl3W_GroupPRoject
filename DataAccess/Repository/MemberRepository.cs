@@ -26,6 +26,16 @@ namespace DataAccess.Repository
 
         }
 
+        public List<MemberDTO> GetAllByCity(string city)
+        {
+            return MemberDAO.Instance.GetAllByCity(city);
+        }
+
+        public List<MemberDTO> GetAllByEmail(string email)
+        {
+            return MemberDAO.Instance.GetAllByEmail(email);
+        }
+
         public MemberDTO GetOneById(int id)
         {
             return MemberDAO.Instance.GetMemberById(id);
