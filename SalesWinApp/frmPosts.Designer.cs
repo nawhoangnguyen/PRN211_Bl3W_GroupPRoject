@@ -77,6 +77,7 @@
             txtSearch.Location = new Point(78, 35);
             txtSearch.Margin = new Padding(3, 2, 3, 2);
             txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Search By Title";
             txtSearch.Size = new Size(203, 23);
             txtSearch.TabIndex = 40;
             // 

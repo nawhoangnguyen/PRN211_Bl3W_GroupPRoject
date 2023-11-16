@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,10 +36,24 @@ namespace SalesWinApp
 
            }*/
 
+        static bool IsValidGmailAddress(string email)
+        {
+            // Gmail address pattern
+            string pattern = @"^[a-zA-Z0-9._%+-]+@gmail\.com$";
 
+            // Create a Regex object
+            Regex regex = new Regex(pattern);
+
+            // Test the email against the pattern
+            return regex.IsMatch(email);
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            bool isValid = IsValidGmailAddress(txtEmail.Text);
+            if (!isValid) {
+                MessageBox.Show("Wrong gmail format !! - Please check input again");
+                return;
+            }
             MemberDTO member = new MemberDTO()
             {
                 Email = txtEmail.Text,

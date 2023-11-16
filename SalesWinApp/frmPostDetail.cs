@@ -43,6 +43,13 @@ namespace SalesWinApp
         private void button1_Click(object sender, EventArgs e)
         {
 
+            int contentLength = txtContent.Text.Length;
+            if (contentLength > 600 || contentLength < 1)
+            {
+                MessageBox.Show("Content must between 1 - 600 words");
+                return;
+            }
+
             PostDTO post = new PostDTO()
             {
 
@@ -67,6 +74,9 @@ namespace SalesWinApp
 
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

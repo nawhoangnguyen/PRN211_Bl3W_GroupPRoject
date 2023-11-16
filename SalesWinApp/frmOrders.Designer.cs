@@ -62,6 +62,8 @@
             label14 = new Label();
             dgvOrderDetail = new DataGridView();
             btnView = new Button();
+            txtMemberName = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -127,7 +129,7 @@
             // 
             // txtOrderDate
             // 
-            txtOrderDate.Location = new Point(305, 166);
+            txtOrderDate.Location = new Point(305, 164);
             txtOrderDate.Margin = new Padding(3, 2, 3, 2);
             txtOrderDate.Name = "txtOrderDate";
             txtOrderDate.Size = new Size(184, 23);
@@ -136,7 +138,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(201, 168);
+            label3.Location = new Point(202, 172);
             label3.Name = "label3";
             label3.Size = new Size(64, 15);
             label3.TabIndex = 50;
@@ -153,7 +155,7 @@
             // sa
             // 
             sa.AutoSize = true;
-            sa.Location = new Point(201, 117);
+            sa.Location = new Point(202, 120);
             sa.Name = "sa";
             sa.Size = new Size(65, 15);
             sa.TabIndex = 48;
@@ -170,7 +172,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(201, 67);
+            label1.Location = new Point(216, 72);
             label1.Name = "label1";
             label1.Size = new Size(50, 15);
             label1.TabIndex = 46;
@@ -255,6 +257,8 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txtMemberName);
+            groupBox2.Controls.Add(label7);
             groupBox2.Controls.Add(txtProductName);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(txtDiscountDe);
@@ -404,6 +408,24 @@
             btnView.UseVisualStyleBackColor = true;
             btnView.Click += btnView_Click;
             // 
+            // txtMemberName
+            // 
+            txtMemberName.Location = new Point(194, 172);
+            txtMemberName.Margin = new Padding(3, 2, 3, 2);
+            txtMemberName.Name = "txtMemberName";
+            txtMemberName.Size = new Size(184, 23);
+            txtMemberName.TabIndex = 64;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(72, 180);
+            label7.Name = "label7";
+            label7.Size = new Size(84, 15);
+            label7.TabIndex = 63;
+            label7.Text = "Member Email";
+            label7.Click += label7_Click;
+            // 
             // frmOrders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -473,5 +495,7 @@
         private Button btnView;
         private TextBox txtProductName;
         private Label label2;
+        private TextBox txtMemberName;
+        private Label label7;
     }
 }
