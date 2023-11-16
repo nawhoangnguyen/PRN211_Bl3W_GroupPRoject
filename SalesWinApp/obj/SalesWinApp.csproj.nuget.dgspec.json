@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {}
+    "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\SalesWinApp\\SalesWinApp.csproj": {}
   },
   "projects": {
-    "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\obj\\",
+        "projectPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Nguyen Thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nguyen Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,20 +84,20 @@
         }
       }
     },
-    "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
+    "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\DataAccess\\obj\\",
+        "projectPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Nguyen Thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nguyen Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -105,14 +106,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\BusinessObject.csproj"
+              "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -156,20 +158,20 @@
         }
       }
     },
-    "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {
+    "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\SalesWinApp\\SalesWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+        "projectUniqueName": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\SalesWinApp\\SalesWinApp.csproj",
         "projectName": "SalesWinApp",
-        "projectPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\SalesWinApp\\obj\\",
+        "projectPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\SalesWinApp\\SalesWinApp.csproj",
+        "packagesPath": "C:\\Users\\Nguyen Thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\SalesWinApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nguyen Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -178,17 +180,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\BusinessObject\\BusinessObject.csproj"
+              "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\2023_Semester5_FALL\\PRN211\\NhatTQ6\\Assignment\\Assignments\\Ass02Solution\\DataAccess\\DataAccess.csproj"
+              "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\FPT_University\\PRN211\\2_PRN211\\2_PRN211\\2_PRN211\\Assignments\\Group_Project\\CSharp-ParrotShop\\DataAccess\\DataAccess.csproj"
               }
             }
           }
