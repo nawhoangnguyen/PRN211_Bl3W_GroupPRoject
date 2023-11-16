@@ -33,6 +33,7 @@
             tsProduct = new ToolStripMenuItem();
             tsOrder = new ToolStripMenuItem();
             postToolStripMenuItem = new ToolStripMenuItem();
+            btnLogout = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,47 +43,57 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { tsMember, tsProduct, tsOrder, postToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(914, 30);
+            menuStrip1.Size = new Size(800, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // tsMember
             // 
             tsMember.Name = "tsMember";
-            tsMember.Size = new Size(79, 24);
+            tsMember.Size = new Size(64, 20);
             tsMember.Text = "Member";
             tsMember.Click += memberToolStripMenuItem_Click;
             // 
             // tsProduct
             // 
             tsProduct.Name = "tsProduct";
-            tsProduct.Size = new Size(74, 24);
+            tsProduct.Size = new Size(61, 20);
             tsProduct.Text = "Product";
             tsProduct.Click += productManagementToolStripMenuItem_Click;
             // 
             // tsOrder
             // 
             tsOrder.Name = "tsOrder";
-            tsOrder.Size = new Size(61, 24);
+            tsOrder.Size = new Size(49, 20);
             tsOrder.Text = "Order";
             tsOrder.Click += tsOrder_Click;
             // 
             // postToolStripMenuItem
             // 
             postToolStripMenuItem.Name = "postToolStripMenuItem";
-            postToolStripMenuItem.Size = new Size(50, 24);
+            postToolStripMenuItem.Size = new Size(42, 20);
             postToolStripMenuItem.Text = "Post";
             postToolStripMenuItem.Click += postToolStripMenuItem_Click;
             // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(695, 407);
+            btnLogout.Margin = new Padding(3, 2, 3, 2);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(82, 22);
+            btnLogout.TabIndex = 44;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
+            // 
             // frmMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMain";
             Text = "Main";
             Load += frmMain_Load_1;
@@ -99,5 +110,6 @@
         private ToolStripMenuItem tsProduct;
         private ToolStripMenuItem tsOrder;
         private ToolStripMenuItem postToolStripMenuItem;
+        private Button btnLogout;
     }
 }

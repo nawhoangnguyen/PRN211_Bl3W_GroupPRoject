@@ -177,6 +177,13 @@ namespace SalesWinApp
             txtUnitPriceDe.DataBindings.Add("Text", source, "UnitPrice");
             txtQuantityDe.DataBindings.Add("Text", source, "Quantity");
 
+            ProductDTO productDTO = ProductDAO.Instance.GetProductId(Int32.Parse(txtProductIdDe.Text));
+            txtProductName.Text = productDTO.ProductName;
+            txtProductName.Enabled = false;
+           
+
+
+
             dgvOrderDetail.DataSource = null;
             dgvOrderDetail.DataSource = source;
 
@@ -190,6 +197,8 @@ namespace SalesWinApp
             txtDiscountDe.Enabled = false;
             txtUnitPriceDe.Enabled = false;
             txtQuantityDe.Enabled = false;
+            dgvOrderDetail.Columns["Order"].Visible = false;
+            dgvOrderDetail.Columns["Product"].Visible = false;
         }
     }
 }

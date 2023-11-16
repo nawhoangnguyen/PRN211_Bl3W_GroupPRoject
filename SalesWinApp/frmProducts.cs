@@ -28,7 +28,7 @@ namespace SalesWinApp
         public frmProducts()
         {
             InitializeComponent();
-           
+
 
         }
         private void ClearText()
@@ -190,7 +190,11 @@ namespace SalesWinApp
                 idToUpdate = Int32.Parse(txtProductId.Text)
 
             };
-            frmProductDetail.ShowDialog();
+            if (frmProductDetail.ShowDialog() == DialogResult.OK)
+            {
+                LoadProduct(null);
+                source.Position = source.Count - 1;
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -214,10 +218,7 @@ namespace SalesWinApp
         {
 
             bool check = true;
-           /* if (radId.Checked)
-            {
-                check = false;
-            }*/
+
             try
             {
                 LoadProduct(productRepository.SearchByNameAndIdOrSortByUnitPriceAndUnitsPriceInStock(txtSearch.Text, null, null, check));
@@ -319,7 +320,7 @@ namespace SalesWinApp
         {
             frmCart frmCart = new frmCart()
             {
-                memberId= memberId,
+                memberId = memberId,
                 shoppingSession = shoppingSession
             };
 
