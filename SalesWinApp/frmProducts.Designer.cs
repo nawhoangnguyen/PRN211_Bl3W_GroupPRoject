@@ -183,7 +183,10 @@
             // 
             txtSearch.Location = new Point(89, 47);
             txtSearch.Name = "txtSearch";
+
             txtSearch.Size = new Size(249, 27);
+            txtSearch.PlaceholderText = "Search By Product Name";
+            txtSearch.Size = new Size(218, 23);
             txtSearch.TabIndex = 40;
             // 
             // label7
@@ -192,12 +195,16 @@
             label7.Location = new Point(30, 49);
             label7.Name = "label7";
             label7.Size = new Size(53, 20);
+
+            label7.Size = new Size(0, 15);
             label7.TabIndex = 39;
-            label7.Text = "Search";
             // 
             // btnSearch
             // 
             btnSearch.Location = new Point(368, 52);
+
+            btnSearch.Location = new Point(316, 34);
+            btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 38;
@@ -373,6 +380,7 @@
             btnAddToCart.TabIndex = 66;
             btnAddToCart.Text = "Add To Cart";
             btnAddToCart.UseVisualStyleBackColor = true;
+            btnAddToCart.Visible = false;
             btnAddToCart.Click += btnAddToCart_Click;
             // 
             // btnViewCart
@@ -385,6 +393,7 @@
             btnViewCart.Text = "View Cart";
             btnViewCart.TextAlign = ContentAlignment.TopCenter;
             btnViewCart.UseVisualStyleBackColor = true;
+            btnViewCart.Visible = false;
             btnViewCart.Click += btnViewCart_Click;
             // 
             // frmProducts
@@ -418,7 +427,7 @@
             Controls.Add(dataGridView1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmProducts";
-            Text = "frmProducts";
+            Text = "Product";
             Load += frmProducts_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

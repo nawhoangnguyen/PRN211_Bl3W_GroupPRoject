@@ -15,5 +15,7 @@ namespace DataAccess.Repository
         public void Update(MemberDTO member);  
         public MemberDTO GetOneById(int id);
         public MemberDTO Login(string email, string password);
+        public List<MemberDTO> GetAllByEmail(string email);
+        public List<MemberDTO> GetAllByCity(string city);
     }
 }

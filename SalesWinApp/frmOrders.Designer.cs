@@ -48,6 +48,8 @@
             dtpTo = new DateTimePicker();
             dtpFrom = new DateTimePicker();
             groupBox2 = new GroupBox();
+            txtProductName = new TextBox();
+            label2 = new Label();
             txtDiscountDe = new TextBox();
             txtUnitPriceDe = new TextBox();
             txtProductIdDe = new TextBox();
@@ -60,6 +62,8 @@
             label14 = new Label();
             dgvOrderDetail = new DataGridView();
             btnView = new Button();
+            txtMemberName = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -68,58 +72,64 @@
             // 
             // txtFreight
             // 
-            txtFreight.Location = new Point(746, 134);
+            txtFreight.Location = new Point(542, 129);
             txtFreight.Margin = new Padding(3, 2, 3, 2);
             txtFreight.Name = "txtFreight";
             txtFreight.Size = new Size(184, 23);
             txtFreight.TabIndex = 57;
+            txtFreight.Visible = false;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(649, 139);
+            label6.Location = new Point(445, 134);
             label6.Name = "label6";
             label6.Size = new Size(44, 15);
             label6.TabIndex = 56;
             label6.Text = "Freight";
+            label6.Visible = false;
             // 
             // txtShippedDate
             // 
-            txtShippedDate.Location = new Point(746, 86);
+            txtShippedDate.Location = new Point(542, 81);
             txtShippedDate.Margin = new Padding(3, 2, 3, 2);
             txtShippedDate.Name = "txtShippedDate";
             txtShippedDate.Size = new Size(184, 23);
             txtShippedDate.TabIndex = 55;
+            txtShippedDate.Visible = false;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(649, 86);
+            label5.Location = new Point(445, 81);
             label5.Name = "label5";
             label5.Size = new Size(77, 15);
             label5.TabIndex = 54;
             label5.Text = "Shipped Date";
+            label5.Visible = false;
             // 
             // txtRequriedDate
             // 
-            txtRequriedDate.Location = new Point(746, 38);
+            txtRequriedDate.Location = new Point(542, 33);
             txtRequriedDate.Margin = new Padding(3, 2, 3, 2);
             txtRequriedDate.Name = "txtRequriedDate";
             txtRequriedDate.Size = new Size(184, 23);
             txtRequriedDate.TabIndex = 53;
+            txtRequriedDate.Visible = false;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(649, 40);
+            label4.Location = new Point(445, 35);
             label4.Name = "label4";
             label4.Size = new Size(81, 15);
             label4.TabIndex = 52;
             label4.Text = "Required Date";
+            label4.Visible = false;
             // 
             // txtOrderDate
             // 
-            txtOrderDate.Location = new Point(186, 140);
+            txtOrderDate.Location = new Point(305, 164);
             txtOrderDate.Margin = new Padding(3, 2, 3, 2);
             txtOrderDate.Name = "txtOrderDate";
             txtOrderDate.Size = new Size(184, 23);
@@ -128,7 +138,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(82, 142);
+            label3.Location = new Point(202, 172);
             label3.Name = "label3";
             label3.Size = new Size(64, 15);
             label3.TabIndex = 50;
@@ -136,7 +146,7 @@
             // 
             // txtMemberId
             // 
-            txtMemberId.Location = new Point(186, 86);
+            txtMemberId.Location = new Point(305, 112);
             txtMemberId.Margin = new Padding(3, 2, 3, 2);
             txtMemberId.Name = "txtMemberId";
             txtMemberId.Size = new Size(184, 23);
@@ -145,7 +155,7 @@
             // sa
             // 
             sa.AutoSize = true;
-            sa.Location = new Point(82, 91);
+            sa.Location = new Point(202, 120);
             sa.Name = "sa";
             sa.Size = new Size(65, 15);
             sa.TabIndex = 48;
@@ -153,7 +163,7 @@
             // 
             // txtOrderId
             // 
-            txtOrderId.Location = new Point(186, 38);
+            txtOrderId.Location = new Point(305, 64);
             txtOrderId.Margin = new Padding(3, 2, 3, 2);
             txtOrderId.Name = "txtOrderId";
             txtOrderId.Size = new Size(184, 23);
@@ -162,7 +172,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(82, 41);
+            label1.Location = new Point(216, 72);
             label1.Name = "label1";
             label1.Size = new Size(50, 15);
             label1.TabIndex = 46;
@@ -172,13 +182,13 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(50, 332);
+            dataGridView1.Location = new Point(60, 272);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(920, 201);
+            dataGridView1.Size = new Size(575, 201);
             dataGridView1.TabIndex = 42;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -218,7 +228,7 @@
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(btnFilter);
-            groupBox1.Location = new Point(357, 175);
+            groupBox1.Location = new Point(25, 405);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
@@ -226,6 +236,7 @@
             groupBox1.TabIndex = 60;
             groupBox1.TabStop = false;
             groupBox1.Text = "Filter Date";
+            groupBox1.Visible = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
             // dtpTo
@@ -246,8 +257,13 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txtMemberName);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(txtProductName);
+            groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(txtDiscountDe);
             groupBox2.Controls.Add(txtUnitPriceDe);
+            groupBox2.Controls.Add(groupBox1);
             groupBox2.Controls.Add(txtProductIdDe);
             groupBox2.Controls.Add(txtQuantityDe);
             groupBox2.Controls.Add(txtOrderIdDe);
@@ -257,7 +273,7 @@
             groupBox2.Controls.Add(label13);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(dgvOrderDetail);
-            groupBox2.Location = new Point(1054, 29);
+            groupBox2.Location = new Point(732, 33);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
@@ -266,12 +282,29 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Order Details";
             // 
+            // txtProductName
+            // 
+            txtProductName.Location = new Point(96, 111);
+            txtProductName.Margin = new Padding(3, 2, 3, 2);
+            txtProductName.Name = "txtProductName";
+            txtProductName.Size = new Size(98, 23);
+            txtProductName.TabIndex = 62;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(13, 113);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 15);
+            label2.TabIndex = 61;
+            label2.Text = "ProducName";
+            // 
             // txtDiscountDe
             // 
-            txtDiscountDe.Location = new Point(96, 110);
+            txtDiscountDe.Location = new Point(318, 110);
             txtDiscountDe.Margin = new Padding(3, 2, 3, 2);
             txtDiscountDe.Name = "txtDiscountDe";
-            txtDiscountDe.Size = new Size(98, 23);
+            txtDiscountDe.Size = new Size(92, 23);
             txtDiscountDe.TabIndex = 53;
             // 
             // txtUnitPriceDe
@@ -327,7 +360,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(25, 111);
+            label12.Location = new Point(247, 111);
             label12.Name = "label12";
             label12.Size = new Size(54, 15);
             label12.TabIndex = 44;
@@ -366,7 +399,7 @@
             // 
             // btnView
             // 
-            btnView.Location = new Point(888, 293);
+            btnView.Location = new Point(553, 235);
             btnView.Margin = new Padding(3, 2, 3, 2);
             btnView.Name = "btnView";
             btnView.Size = new Size(82, 22);
@@ -375,14 +408,31 @@
             btnView.UseVisualStyleBackColor = true;
             btnView.Click += btnView_Click;
             // 
+            // txtMemberName
+            // 
+            txtMemberName.Location = new Point(194, 172);
+            txtMemberName.Margin = new Padding(3, 2, 3, 2);
+            txtMemberName.Name = "txtMemberName";
+            txtMemberName.Size = new Size(184, 23);
+            txtMemberName.TabIndex = 64;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(72, 180);
+            label7.Name = "label7";
+            label7.Size = new Size(84, 15);
+            label7.TabIndex = 63;
+            label7.Text = "Member Email";
+            label7.Click += label7_Click;
+            // 
             // frmOrders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1534, 589);
+            ClientSize = new Size(1179, 589);
             Controls.Add(btnView);
             Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
             Controls.Add(txtFreight);
             Controls.Add(label6);
             Controls.Add(txtShippedDate);
@@ -443,5 +493,9 @@
         private Label label14;
         private DataGridView dgvOrderDetail;
         private Button btnView;
+        private TextBox txtProductName;
+        private Label label2;
+        private TextBox txtMemberName;
+        private Label label7;
     }
 }

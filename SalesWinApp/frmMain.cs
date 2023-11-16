@@ -105,5 +105,11 @@ namespace SalesWinApp
             };
             frmDiscount.ShowDialog();
         }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
+        }
     }
 }

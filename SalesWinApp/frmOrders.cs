@@ -135,11 +135,13 @@ namespace SalesWinApp
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = source;
 
+
                 dataGridView1.Columns["RequiredDate"].Visible = false;
                 dataGridView1.Columns["ShippedDate"].Visible = false;
                 dataGridView1.Columns["Freight"].Visible = false;
                 dataGridView1.Columns["Member"].Visible = false;
                 dataGridView1.Columns["OrderDetails"].Visible = false;
+               
 
 
             }
@@ -177,6 +179,15 @@ namespace SalesWinApp
             txtUnitPriceDe.DataBindings.Add("Text", source, "UnitPrice");
             txtQuantityDe.DataBindings.Add("Text", source, "Quantity");
 
+            ProductDTO productDTO = ProductDAO.Instance.GetProductId(Int32.Parse(txtProductIdDe.Text));
+            txtProductName.Text = productDTO.ProductName;
+            txtProductName.Enabled = false;
+
+
+            MemberDTO member = MemberDAO.Instance.GetMemberById(Int32.Parse(txtMemberId.Text));
+            txtMemberName.Text = member.Email;
+            txtMemberName.Enabled = false;
+
             dgvOrderDetail.DataSource = null;
             dgvOrderDetail.DataSource = source;
 
@@ -190,6 +201,13 @@ namespace SalesWinApp
             txtDiscountDe.Enabled = false;
             txtUnitPriceDe.Enabled = false;
             txtQuantityDe.Enabled = false;
+            dgvOrderDetail.Columns["Order"].Visible = false;
+            dgvOrderDetail.Columns["Product"].Visible = false;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
