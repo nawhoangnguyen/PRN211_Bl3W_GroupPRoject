@@ -182,6 +182,8 @@ namespace SalesWinApp
             ProductDTO productDTO = ProductDAO.Instance.GetProductId(Int32.Parse(txtProductIdDe.Text));
             txtProductName.Text = productDTO.ProductName;
             txtProductName.Enabled = false;
+          
+            txtDiscountDe.Visible = false;
 
 
             MemberDTO member = MemberDAO.Instance.GetMemberById(Int32.Parse(txtMemberId.Text));
@@ -203,6 +205,7 @@ namespace SalesWinApp
             txtQuantityDe.Enabled = false;
             dgvOrderDetail.Columns["Order"].Visible = false;
             dgvOrderDetail.Columns["Product"].Visible = false;
+            dgvOrderDetail.Columns["Discount"].Visible = false;
         }
 
         private void label7_Click(object sender, EventArgs e)
